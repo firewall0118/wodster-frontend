@@ -1,0 +1,39 @@
+<form name="userCoachProfileForm">
+  <ion-view title="Coach Profile">
+    <ion-content class="ionic-content">
+      <table style="width:100%">
+        <tr>
+          <th>{{resultCoaches.name}}</th>
+        </tr>
+        <tr>
+          <td style="text-align: center;">{{resultCoaches.duty}}</td>
+        </tr>
+      </table>
+
+      <div class="list">
+        <div class="item item-text-wrap  search-border-bg coach-profile-item-border">
+          <p class="coach-profile-item-title">Certification</p>
+        </div>
+        <div ng-repeat="certification in certifications" class="item item-input coach-profile-item-content">
+          <input type="text" name="time" ng-minlength="8" ng-value="certification.name"></input>
+        </div >
+        <div class="item item-text-wrap  search-border-bg coach-profile-item-border">
+          <p class="coach-profile-item-title">Reviews</p>
+        </div>
+        <div class="item item-text-wrap" ng-repeat="user in users">
+          <input type="text" name="time" ng-minlength="8" ng-value="user.name"></input>
+        </div>
+        <div class="item item-text-wrap  search-border-bg coach-profile-item-border">
+          <p class="coach-profile-item-title">My wods</p>
+        </div>
+        <div class="padding request-button">
+          <button class="button button-block button-positive button-color-cust" ng-click="goCreateWod()">CREATE WOD</button>
+        </div>
+      </div>
+
+    </ion-content>
+
+    <div ng-include src="'templates/shared/tabs.html'">
+
+  </ion-view>
+</form>

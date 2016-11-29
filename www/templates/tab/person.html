@@ -1,0 +1,33 @@
+<form name="personForm">
+  <ion-view title="PROFILE">
+	  <ion-header-bar class="bar bar-header bar-positive" style="background-color: #fb2e00;">
+		 	<h1 class="title">PROFILE</h1>
+	 	</ion-header-bar>
+
+    <ion-content class="ionic-content">
+    	<div class="request-wod">
+	      <table style="width:100%">
+	        <tr>
+	          <th>Name: {{user.name}}</th>
+	        </tr>
+	        <tr>
+	          <td style="text-align: center;">Age: </td>
+	        </tr>
+	      </table>
+      
+	      <div>
+	        <ion-label class="input-label request-wod-label">RECENT WORKOUTS</ion-label>
+	      </div>
+      </div>
+      <div class="list">
+        <div ng-repeat="userCenter in userCenters" class="item item-input" >
+          <input type="text" name="name" ng-value="userCenter.name" ></input>
+          <button class="button button-icon icon ion-ios-arrow-right placeholder-icon wod-ion-icon" ng-click="coach_search(userCenter)"></button>
+        </div>
+      </div>
+
+    </ion-content>
+  </ion-view>
+</form>
+
+<div ng-include src="'templates/shared/tabs.html'">

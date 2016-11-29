@@ -1,0 +1,20 @@
+<form name="exploreForm">
+  <ion-view title="Explore">
+    <ion-content class="ionic-content">
+      <!-- <div class="scroll-view">
+      	 <div class="padding">
+          <button ng-click="signOut()" class="button button-block button-positive">Log Out
+          </button>
+        </div>
+      </div> -->
+      <div class="list" style="margin-top:30px">
+        <div ng-repeat="category in categories" class="item item-input" >
+          <input type="text" name="name" ng-value="category.name" ></input>
+          <button class="button button-icon icon ion-ios-arrow-right placeholder-icon wod-ion-icon" ng-click="go_search(category)"></button>
+        </div>
+      </div>
+    </ion-content>
+  </ion-view>
+</form>
+
+<div ng-include src="'templates/shared/tabs.html'">

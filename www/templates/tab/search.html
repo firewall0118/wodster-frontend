@@ -1,0 +1,59 @@
+<form name="searchForm">
+  <ion-view title="Search">
+    <ion-content class="ionic-content">
+      <div class="search-scroll-view">
+        <!-- search params -->
+        <div class="places-search">
+          <div class="item item-text-wrap  search-border-bg">
+            <div class="item item-input search-input">
+              <i class="icon ion-search placeholder-icon"></i>
+              <input type="text" g-places-autocomplete force-selection="true" ng-model="searchNameParams.name"  placeholder="search wod"/>
+              <button class="button button-icon icon ion-ios-search placeholder-icon search-button-icon" ng-click="wodSearch()"></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="request-wod">
+          <ion-label class="input-label request-wod-label">REQUEST WOD</ion-label>
+        </div>
+
+        <div class="list">
+          <label class="item item-input">
+            <ion-label class="input-label">{{searchParams.category_name}}:</ion-label>
+            <input type="text" name="name" ng-value="searchResult.name" ng-minlength="8" placefolder="Wod Name" ></input>
+            <i class="icon ion-ios-arrow-down placeholder-icon wod-ion-icon"></i>
+          </label >
+    
+          <label class="item item-input">
+            <ion-label class="input-label">Date:</ion-label>
+            <input type="text" name="date" ng-value="searchResult.wod_datetime"></input>
+            <i class="icon ion-ios-calendar placeholder-icon wod-ion-icon"></i>
+          </label >
+
+          <label class="item item-input">
+            <ion-label class="input-label">Time:</ion-label>
+            <input type="text" name="time" ng-value="searchResult.wod_time"></input>
+            <i class="icon ion-ios-arrow-down placeholder-icon wod-ion-icon"></i>
+          </label >
+
+          <label class="item item-input">
+            <ion-label class="input-label">Address:</ion-label>
+            <input type="text" name="address" ng-value="searchResult.location">
+            </input>
+            <i class="icon ion-ios-location placeholder-icon wod-ion-icon"></i>
+          </label>
+
+          <ion-label class="input-label" style="padding-left: 15px">Description:</ion-label>
+          <textarea name="description" ng-model="searchResult.description" class="desctipion-text" ></textarea>
+        </div>
+
+        <div class="padding request-button">
+          <button class="button button-block button-positive button-color-cust" ng-click="request()">request</button>
+        </div>
+      </div>
+    </ion-content>
+      
+    <div ng-include src="'templates/shared/tabs.html'">
+
+  </ion-view>
+</form>

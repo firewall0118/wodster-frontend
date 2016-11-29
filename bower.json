@@ -1,0 +1,16 @@
+{
+  "name": "HelloIonic",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.3.2",
+    "angular": "*",
+    "angular-cookie": "*",
+    "ng-token-auth": "*"
+  },
+  "dependencies": {
+    "angular-local-storage": "^0.5.2",
+    "stripe-angular": "^1.0.2",
+    "ng-file-upload": "^12.2.13",
+    "angularjs-slider": "^5.8.7"
+  }
+}

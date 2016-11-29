@@ -1,0 +1,44 @@
+<form name="registrationForm" ng-submit="submitRegistration(registration)" novalidate="" 
+ role="form" ng-init="registration = {}">
+  <ion-view title="Sign Up">
+    <ion-content>
+      <div class="form-group">
+        <div class="scroll-view">
+          <div class="list list-inset">
+            <div>
+              <span class="input-label">Name</span>
+              <div class="item item-input">
+                <input type="text" name="name" ng-model="registration.name" required class="form-control" >
+              </div>
+              <p style="color:red" ng-show="hasError('name', 'required')">Name is required</p>
+            </div>
+            <div>
+              <span class="input-label">Email</span>
+              <div class="item item-input">
+                <input type="email" name="email" ng-model="registration.email" required="required" class="form-control"/>
+              </div>
+              <p style="color:red" ng-show="hasError('email', 'required')">Email is required</p>
+            </div>
+            <div>
+              <span class="input-label">Password</span>
+              <div class="item item-input">
+                <input type="password" name="password" ng-model="registration.password" required >
+              </div>
+              <p style="color:red" ng-show="hasError('password', 'required')">Password is required</p>
+            </div>
+            <div>
+              <span class="input-label">Password Confirmation</span>
+              <div class="item item-input">
+                <input type="password" name="password_confirmation" ng-model="registration.password_confirmation" required >
+              </div>
+              <p style="color:red" ng-show="hasError('password_confirmation', 'required')">Password Confirm is required</p>
+            </div>
+          </div>
+          <div class="padding">
+            <button type="submit" class="button button-block button-positive" >Create Account</button>
+          </div>
+        </div>
+      </div>
+    </ion-content>
+  </ion-view>
+</form>

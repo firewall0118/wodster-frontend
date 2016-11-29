@@ -1,0 +1,61 @@
+<form name="createWodForm">
+  <ion-view title="CREATE WOD">
+    <ion-content class="ionic-content">
+      <div class="search-scroll-view">
+        <div class="list">
+          <div class="item item-input from-group" ng-class="{ 'has-error' : createWodForm.name.$invalid && !createWodForm.name.$pristine }">
+            <ion-label class="input-label">{{searchParams.category_name}}:</ion-label>
+            <input type="text" name="name" ng-model="searchResult.name" ></input>
+            <i class="icon ion-ios-arrow-down placeholder-icon wod-ion-icon"></i>
+          </div >
+    
+          <label class="item item-input">
+            <ion-label class="input-label">Date:</ion-label>
+            <input type="date" name="currentDate" ng-model="searchResult.currentDate"></input>
+            <span ng-bind="convertToDate(myDate) | date:'dd/MMMM/yy'"></span>
+            <!-- <button class="button button-icon icon ion-ios-calendar placeholder-icon wod-ion-icon" ng-click='storeTime()'></button> -->
+          </label >
+
+          <label class="item item-input">
+            <ion-label class="input-label">Time:</ion-label>
+            <input type="time" name="currentTime" ng-model="searchResult.currentTime"></input>
+            <!-- <i class="icon ion-ios-arrow-down placeholder-icon wod-ion-icon"></i> -->
+          </label >
+
+          <label class="item item-input">
+            <ion-label class="input-label">Location:</ion-label>
+            <input type="text" name="location" ng-model="searchResult.location" >
+            </input>
+            <i class="icon ion-ios-location placeholder-icon wod-ion-icon"></i>
+          </label>
+
+          <label class="item item-input">
+            <ion-label class="input-label">Capacity:</ion-label>
+            <input type="number" name="capacity" ng-model="searchResult.capacity" >
+            </input>
+            <i class="icon ion-ios-arrow-down placeholder-icon wod-ion-icon"></i>
+          </label>
+
+          <div class="item item-input">
+            <ion-label class="input-label">Upload picture</ion-label>
+            <input type="text" ng-value="upload.file.name">
+              <div class="button upload-button" ngf-select='fileUpload()' ng-model="upload.file" name="file" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100" ngf-resize="{width: 100, height: 100}">
+                <i class="icon ion-ios-more placeholder-icon wod-ion-icon"></i>
+              </div>  
+            </input>
+          </div>
+
+          <ion-label class="input-label" style="padding-left: 16px">Description:</ion-label>
+          <textarea name="description" ng-model="searchResult.description" class="desctipion-text" ></textarea>
+        </div>
+
+        <div class="padding request-button">
+          <button class="button button-block button-positive button-color-cust" ng-click='createWod()'>SUBMIT</button>
+        </div>
+      </div>
+    </ion-content>
+      
+    <div ng-include src="'templates/shared/tabs.html'">
+
+  </ion-view>
+</form> 

@@ -1,0 +1,23 @@
+<script id="templates/tabs.html" type="text/ng-template">
+  <ion-tabs class="tabs-icon-top tabs-color-active-positive">
+    <ion-tab  id="search_tab" icon-off="ion-ios-search-strong" icon-on="ion-ios-search-strong " class="tab tab-icon" ng-click="goSearch()">
+      <ion-nav-view name="search-tab"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab  id="setting_tab" icon-off="ion-ios-gear" icon-on="ion-ios-gear" class="tab-icon" ng-click="goSetting()">
+      <ion-nav-view name="setting-tab"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab  id="explore_tab" icon-off="ion-lock-combination" icon-on="ion-lock-combination" class="tab tab-icon" ng-click="goExplore()" >
+      <ion-nav-view name="explore-tab"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab  id="map_tab" icon-off="ion-ios-location" icon-on="ion-ios-location" class="tab tab-icon" ng-click="goMap()">
+      <ion-nav-view name="map-tab"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab  id="person_tab" icon-off="ion-ios-person" icon-on="ion-ios-person" class="tab tab-icon" ng-click="goPerson()">
+      <ion-nav-view name="person-tab"></ion-nav-view>
+    </ion-tab>
+  </ion-tabs>
+</script>

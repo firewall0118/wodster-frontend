@@ -1,0 +1,93 @@
+<!-- <form stripe:form="saveCustomer"> -->
+<form name="settingForm">
+  <ion-view title="Setting">
+    <ion-content>
+      <!-- <ion-scroll style="margin: 0px;"> -->
+        <div class="list">
+          <div class="item item-text-wrap  setting-border-bg coach-profile-item-border">
+            <p class="setting-content-title">DISTANCE</p>
+          </div>
+          <h4 class="payment-title">Maximum Distance</h4>
+          <div class="distance-slide" >
+            <rzslider
+              rz-slider-model="slider.value"
+              rz-slider-options="slider.options">
+            </rzslider>
+          </div>  
+          <div class="item item-text-wrap  setting-border-bg coach-profile-item-border">
+            <p class="setting-content-title">FAIR</p>
+          </div>
+          <h2 class="payment-title">Payment</h2>
+          <div class="list payment-pane">
+            <i class="icon ion-ios-card placeholder-icon wod-ion-icon"></i> 
+            <input type="text" name="credit_number" data-stripe="number" placeholder='Credit card number'></input>
+            <input type="text" name="CVC" data-stripe="cvc" placeholder='CVC'></input>
+            <input type="text" name="exp-month" data-stripe="exp-month" placeholder='Expire Month'></input>
+            <input type="text" name="exp-year" data-stripe="exp-year" placeholder='Expire Year'></input>
+          </div>
+
+          <div class="padding">
+            <button type="submit" class="button button-block button-positive button-color-cust">Register Payment</button>
+          </div>
+          <div class="list payment-pane">
+            <input type="text" name="CVC" data-stripe="cvc" placeholder='CVC'>
+              <button id="scanBtn" class="button button-icon icon ion-ios-camera placeholder-icon wod-ion-icon" ng-click="onCardIOCheck()"></button>
+              <ion-label>Scan your card</ion-label>
+            </input>
+          </div>
+
+          <div class="item item-text-wrap  setting-border-bg coach-profile-item-border">
+            <p class="setting-content-title">ALERTS</p>
+          </div>
+          <h4 class="payment-title">Reminders</h4>
+          <div class="item item-text-wrap item-text-space">
+            <input type="text" name="address" value="At time of wod" class="setting-button-block">
+              <switch id="enabled" name="enabled1" ng-model="enabled_1" class="green switch-button" ></switch>
+            </input>
+          </div>
+          <div class="item item-text-wrap item-text-space">
+            <input type="text" name="address" value="15 mins before" class="setting-button-block">
+              <switch id="enabled" name="enabled" ng-model="enabled_2" class="green switch-button" ></switch>
+            </input>
+          </div>
+          <div class="item item-text-wrap item-text-space">
+            <input type="text" name="address" value="30 minutes before" 
+            class="setting-button-block">
+              <switch id="enabled" name="enabled" ng-model="enabled_3" class="green switch-button" ></switch>
+            </input>
+          </div>
+          <div class="item item-text-wrap item-text-space">
+            <input type="text" name="address" value="1 hour before" class="setting-button-block">
+              <switch id="enabled" name="enabled1" ng-model="enabled_4" class="green switch-button" ></switch>
+            </input>
+          </div>
+          <div class="item item-text-wrap item-text-space">
+            <input type="text" name="address" value="1 day before" class="setting-button-block">
+              <switch id="enabled" name="enabled1" ng-model="enabled_5" class="green switch-button" ></switch>
+            </input>
+          </div>
+
+          <div class="item item-text-wrap  setting-border-bg coach-profile-item-border">
+          </div>
+          <div class="item item-text-wrap item-text-space">
+            <input type="text" name="report" value="Report a Problem" class="setting-button-block">
+            </input>
+            <button class="button button-icon icon ion-ios-arrow-right placeholder-icon wod-ion-icon switch-button" ng-click="report()"></button>
+          </div>
+          <div class="item item-text-wrap item-text-space">
+            <input type="text" name="privacy" value="Privacy Policy" class="setting-button-block">
+            </input>
+            <button class="button button-icon icon ion-ios-arrow-right placeholder-icon wod-ion-icon switch-button" ng-click="privacyPolicy()"></button>
+          </div>
+          <div class="padding">
+            <button class="button button-block button-positive" ng-click="signOut()">
+              <span>Log Out</span>
+            </button>
+          </div>
+        </div>
+      <!-- </ion-scroll> -->
+    </ion-content>
+
+    <div ng-include src="'templates/shared/tabs.html'">
+  </ion-view>
+</form>

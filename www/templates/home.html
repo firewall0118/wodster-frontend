@@ -1,0 +1,13 @@
+<form ua-home>
+	<ion-view title="Wodster" class="home-background">
+	<div class="backgroun-img-logo"></div>
+		<ion-content class="botton-pos">
+			<div ng-controller="HomeCtrl" class="list list-inset home-auth-background">
+				<button ng-click="goLogin()" ng-hide="authenticated" class="button button-block button-positive home-auth-button">LOG IN</button>
+				<button ng-click="goSignup()" class="button button-block button-positive home-auth-button">SIGN UP</button>
+				<button ng-click="signOut()" ng-show="authenticated" class="button button-block button-positive home-auth-button">Log Out</button>
+				<div ng-include="'templates/login-facebook.html'"></div>
+			</div>	
+		</ion-content>
+	</ion-view>
+</form>

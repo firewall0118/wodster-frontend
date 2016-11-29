@@ -1,0 +1,57 @@
+<form name="descriptionForm">
+  <ion-view title="Description">
+    <ion-content class="ionic-content">
+      <table style="width:100%">
+        <tr>
+          <th>{{searchParams.center_name}}</th>
+        </tr>
+        <tr>
+          <td style="text-align: center;">{{searchParams.location}}</td>
+        </tr>
+      </table>
+      <!-- <tbody>
+        <tr><td>{{searchParams.center_name}}</td></tr>
+        <tr></tr>
+        <tr><td>{{searchParams.location}}</td></tr>
+      </tbody> -->
+
+      <div class="list">
+        <label class="item item-input">
+          <ion-label class="input-label">{{searchParams.category_name}}:</ion-label>
+          <input type="text" name="name" ng-value="searchParams.name" ng-minlength="8" placefolder="Wod Name" ></input>
+        </label >
+  
+        <div class="item item-input">
+          <ion-label class="input-label">Coach:</ion-label>
+          <input type="text" name="address" ng-minlength="8" ng-value="coach_searchResult.name">
+          </input>
+           <button class="button button-icon icon ion-ios-arrow-right placeholder-icon wod-ion-icon" ng-click="coach_profile()"></button>
+        </div>
+
+        <label class="item item-input">
+          <ion-label class="input-label">Date:</ion-label>
+          <input type="text" name="date"" ng-minlength="8" ng-value="searchParams.wod_datetime"></input>
+        </label >
+
+        <label class="item item-input">
+          <ion-label class="input-label">Time:</ion-label>
+          <input type="text" name="time" ng-minlength="8" ng-value="searchParams.wod_time"></input>
+        </label >
+
+        <label class="item item-input">
+          <ion-label class="input-label">Capacity:</ion-label>
+          <input type="text" name="time" ng-minlength="8" ng-value="searchParams.capacity"></input>
+        </label >
+        <ion-label class="input-label" style="padding-left: 12px">Description</ion-label>
+        <textarea name="description" ng-model="searchParams.description" class="desctipion-text"></textarea>
+      </div>
+      <div class="padding request-button">
+        <button class="button button-block button-positive button-color-cust join-button-signup" ng-click="showModal()">Sign Up</button>
+        <button class="button button-block button-positive button-color-cust join-button join-button-map" ng-click="goMap()">Map</button>
+      </div>
+    </ion-content>
+      
+    <div ng-include src="'templates/shared/tabs.html'">
+
+  </ion-view>
+</form>

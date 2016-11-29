@@ -1,0 +1,31 @@
+<h1>Map</h1>
+
+<ion-view title="map">
+  <ion-header-bar class="bar-dark" >
+    <h1 class="title">Map</h1>
+  </ion-header-bar>
+
+  <ion-content>
+  	<div class="places-search">
+      <div class="item item-text-wrap  search-border-bg">
+        <div class="item item-input search-input">
+          <!-- <i class="icon ion-search placeholder-icon"></i> -->
+          <p>from</p>
+          <input type="text" id="origin-input" class="controls map-search-title">
+        </div>
+      </div>
+      <div class="item item-text-wrap search-border-bg">
+        <div class="item item-input search-input">
+        	<p>to</p>
+          <input type="text" id="destination-input" class="controls map-search-title">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="map" data-tap-disabled="true"></div>
+  
+  </ion-content>
+
+</ion-view>
+
+<div ng-include src="'templates/shared/tabs.html'">
